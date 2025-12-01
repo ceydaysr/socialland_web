@@ -23,6 +23,10 @@ app.get('/suggestions', (req, res) => {  //butona tıklayınca adrese /suggestio
     res.render('suggestions'); // views/suggestions.ejs 'yi ekrana vericem insallah 
 });
 
+app.get('/events', (req, res) => {  
+    res.render('events'); 
+});
+
 app.listen(3000, () => {
     console.log('Sunucu 3000 portunda çalışıyor: http://localhost:3000');
 });

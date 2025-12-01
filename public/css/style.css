@@ -115,3 +115,38 @@ body {
 .aktif {
     display: block !important;
 }
+
+.p1{
+    font-size: 50px;
+}
+
+.pic1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; 
+    height: 200px;
+    margin: auto auto;
+}
+.pic2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px; 
+    height: 200px;
+    margin: auto auto;
+}
+
+/* Logoyu kapsayan kutu */
+.pic3 {
+    width: 200px;  /* Boyutu buradan ayarlayabilirsin (50px çok küçük olabilir, 80-100 iyidir) */
+    margin: 100px auto; /* Üstten-alttan 10px boşluk bırak, sağdan-soldan ortala */
+    /* Flex özelliklerine burada gerek yok, margin: auto zaten ortalar */
+}
+
+/* Kutunun içindeki resmin kendisi */
+.pic3 img {
+    width: 100%;   /* Resim, kapsayıcı kutunun (80px) tamamını kaplasın */
+    height: auto;  /* En-boy oranı bozulmasın */
+    display: block; /* Altındaki minik boşlukları siler */
+}
