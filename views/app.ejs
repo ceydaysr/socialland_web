@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Socialland</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1 class="baslik"> SOCIALLAND </h1>
+         <p class="explanation">
+           where fun and creativity meets.
+        </p>
+    </div>
+
+    <div class="header-container">
+        <a href="https://www.instagram.com/socialland_comu" class="myButton" target="_blank" rel="noopener noreferrer">
+        Follow us on Instagram
+    </a>
+         <button class="myButton" onclick="sayfaAc('about-box')" >About Us :)</button>
+         <button class="myButton2" onclick="sayfaAc('quiz-box')" >QUIZ </button>
+         <a href="/suggestions" class="myButton3">Suggestions & Complaints</a>
+    </div>
+
+    <div class="main-content">
+        <%- include('partials/quiz') %>
+        <%- include('partials/about') %>
+    </div>
+
+    <script src="/js/main.js"></script>
+
+
+</body>
