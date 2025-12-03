@@ -1,108 +1,73 @@
 
 
 body {
-    background-color: #ece0c7; 
+    background-color: #FFF8DE; 
     margin: 0;
-}
-
-.myButton {
-    box-shadow: 3px 4px 0px 0px #23395e;
-    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-    background-color: #2e466e;
-    border-radius: 15px;
-    border: 1px solid #1f2f47;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 17px;
-    padding: 7px 25px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #263666;
-}
-.myButton:hover {
-    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-    background-color: #415989;
-}
-.myButton:active {
-    position: relative;
-    top: 1px;
-}
-
-.myButton2 {
-    box-shadow: 3px 4px 0px 0px #23395e;
-    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-    background-color: #2e466e;
-    border-radius: 15px;
-    border: 1px solid #1f2f47;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 17px;
-    padding: 7px 25px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #263666;
-}
-.myButton2:hover {
-    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-    background-color: #415989;
-}
-.myButton2:active {
-    position: relative;
-    top: 1px;
-}
-
-.myButton3 {
-    box-shadow: 3px 4px 0px 0px #23395e;
-    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-    background-color: #2e466e;
-    border-radius: 15px;
-    border: 1px solid #1f2f47;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Arial;
-    font-size: 17px;
-    padding: 7px 25px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #263666;
-}
-.myButton3:hover {
-    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-    background-color: #415989;
-}
-.myButton3:active {
-    position: relative;
-    top: 1px;
-}
-
-
-.header-container {
-    display: flex;           
-    flex-direction: column;  /*alt alta sıraladım */
-    align-items: center;     
-    padding-top: 20px;       /* Sayfanın tavanına yapışmaması için biraz boşluk */
-    gap: 50px;               /* İki buton arasında otomatik boşluk bırakır */
-    width: 100%;             /* Genişliğin tam olmasını sağlar */
-}
-
-.header {
-    text-align: center; /* İçindeki tüm metinleri ve inline elemanları ortalar */
-    padding-top: 100px;  /* En tepeden biraz boşluk bıraktırdım */
-    margin-bottom: 20px; /* Altındaki butonlarla arasına mesafe koyar */
-}
-
-.baslik {
-    margin: 0; /* Tarayıcının varsayılan boşluklarını sıfırladm */
-    color: #2e466e; 
     font-family: Arial, sans-serif;
 }
 
-.explanation {
-    margin-top: 30px; /* Başlık ile yazı arasına biraz boşluk */
-    color: #555;     
+
+.myButton, .myButton2, .myButton3 {
+    background-color: #99A98F;
+    color: #000;
     font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+
+    /* GÜNCELLENEN KISIM: Genişlik otomatike çekildi */
+    display: inline-block; 
+    width: auto;            /* Sayfayı kaplamasın */
+    padding: 15px 30px;     /* İç boşluk */
+    margin: 10px;           /* Butonlar birbirine yapışmasın */
+}
+
+/* Hover (Üzerine gelince) Efektleri */
+.myButton:hover, .myButton2:hover, .myButton3:hover {
+    background-color: #86967D;
+    transform: translateY(-2px);
+}
+
+.header-container {
+    display: grid;
+    /* İki sütun oluştur: Sol (Instagram) ve Sağ (Menü) */
+    grid-template-columns: 250px 250px; 
+    /* Satır yükseklikleri otomatik */
+    grid-auto-rows: min-content;
+    gap: 20px 80px; /* Satırlar arası 20px, Sütunlar arası 80px boşluk */
+    justify-content: center; /* Tüm yapıyı sayfada ortala */
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.header {
+    background-color: #D6E4D0; /* Paletin açık yeşili (Gri kutu yerine) */
+    width: 80%;
+    margin: 30px auto; /* Sayfada ortalar */
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.baslik {
+    margin: 0;
+    color: #000;
+    font-size: 60px;
+    text-decoration:double;
+    text-underline-offset: 10px;
+    letter-spacing: 2px;
+}
+
+.explanation {
+    margin-top: 15px;
+    color: #555;
+    font-size: 18px;
+    font-style: italic;
 }
 
 
@@ -137,16 +102,50 @@ body {
     margin: auto auto;
 }
 
-/* Logoyu kapsayan kutu */
-.pic3 {
-    width: 200px;  /* Boyutu buradan ayarlayabilirsin (50px çok küçük olabilir, 80-100 iyidir) */
-    margin: 100px auto; /* Üstten-alttan 10px boşluk bırak, sağdan-soldan ortala */
-    /* Flex özelliklerine burada gerek yok, margin: auto zaten ortalar */
+/* --- ÖZEL: INSTAGRAM KUTUSU (SOL TARAFTAKİ BÜYÜK KUTU) --- */
+/* HTML'de ilk sırada olduğu için :first-child ile yakalıyoruz */
+.header-container > :first-child {
+    background-color: #99a98f; /* Header ile aynı renk */
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    
+    /* GRID AYARI: Sol sütunda dur ve 4 satır boyunca uzan */
+    grid-column: 1 / 2;
+    grid-row: 1 / 5; 
+    
+    /* Kutu içi hizalama */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 40px;
 }
 
-/* Kutunun içindeki resmin kendisi */
-.pic3 img {
-    width: 100%;   /* Resim, kapsayıcı kutunun (80px) tamamını kaplasın */
-    height: auto;  /* En-boy oranı bozulmasın */
-    display: block; /* Altındaki minik boşlukları siler */
+/* --- DİĞER BUTONLAR (SAĞ TARAF) --- */
+/* İlk eleman dışındaki hepsi sağ sütuna geçsin */
+.header-container > :not(:first-child) {
+    grid-column: 2 / 3; /* 2. sütuna yerleş */
+}
+
+/* --- MAIN CONTENT (Quiz ve About İçeriği) --- */
+.main-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* --- INSTAGRAM LOGO AYARI (GÜNCELLENDİ) --- */
+.insta-logo {
+    width: 160px;        
+    height: 160px;      
+    object-fit:scale-down; 
+    border-radius: 50%;       
+    margin-bottom: 30px; 
+    
+    /* mix-blend-mode: multiply; -> Beyazları ve açık grileri şeffaf yapar, buton rengiyle kaynaştırır */
+    mix-blend-mode: multiply; 
+    
+    /* filter -> Resimdeki gri kareleri beyaza çevirip tamamen yok olmalarını sağlar */
+    filter: contrast(1.5) brightness(1.1);
 }
